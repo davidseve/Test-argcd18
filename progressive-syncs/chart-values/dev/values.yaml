@@ -1,5 +1,5 @@
 build:
-  enabled: true
+  enabled: false
 
 deploy:
   route:
