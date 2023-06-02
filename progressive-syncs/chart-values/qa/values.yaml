@@ -1,6 +1,3 @@
-build:
-  enabled: false
-
 deploy:
   route:
     tls:

@@ -1,2 +1,4 @@
 image:
   name: quay.io/redhatworkshops/gitops-helm-quarkus
+build:
+  enabled: false
