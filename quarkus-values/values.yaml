@@ -1,2 +1,11 @@
-global:
-  nameOverride: test1
+build:
+  enabled: false
+
+deploy:
+  route:
+    tls:
+      enabled: false
+
+
+        # - name: image.name
+        #   value: quay.io/redhatworkshops/gitops-helm-quarkus
