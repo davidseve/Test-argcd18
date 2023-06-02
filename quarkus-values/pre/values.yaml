@@ -4,4 +4,4 @@ build:
 deploy:
   route:
     tls:
-      enabled: false
+      enabled: true

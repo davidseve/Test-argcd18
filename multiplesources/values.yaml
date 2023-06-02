@@ -5,4 +5,6 @@ deploy:
   route:
     tls:
       enabled: true
-  replicas: 4
+
+image:
+  name: quay.io/redhatworkshops/gitops-helm-quarkus

@@ -8,3 +8,4 @@ deploy:
 
 image:
   name: quay.io/redhatworkshops/gitops-helm-quarkus
+  #name: image-registry.openshift-image-registry.svc:5000/openshift-gitops/multiple-sources
