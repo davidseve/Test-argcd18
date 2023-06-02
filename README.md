@@ -1,6 +1,6 @@
-# What`s new in OpenShift GitOps 1.8
+# What's new in OpenShift GitOps 1.8
 
-In this repo there are demos about two new features in 
+In this repository, there are demos of two new features in OpenShift GitOps 1.8
 
 [Multiple Sources for an Application](multiplesources/README.md)
 

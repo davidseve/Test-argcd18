@@ -4,7 +4,7 @@ Multiple Sources is a feature to generate and combine resources from different s
 
 
 ## Documentation
-[Official documentation](https://github.com/davidseve/whats-new-argcd-1.8/tree/main/multiplesources)
+[Official documentation](https://argo-cd.readthedocs.io/en/stable/user-guide/multiple_sources/)
 
 ## Prerequisites:
 

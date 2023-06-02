@@ -34,7 +34,7 @@ deploy:
       enabled: false
 ```
 
-- Values file for **qa** environment:[values.yaml](chart-values/dev/values.yaml)
+- Values file for **qa** environment:[values.yaml](chart-values/qa/values.yaml)
 ```
 deploy:
   route:
@@ -42,7 +42,7 @@ deploy:
       enabled: true
 ```
 
-- Values file for **prod** environment:[values.yaml](chart-values/dev/values.yaml)
+- Values file for **prod** environment:[values.yaml](chart-values/prod/values.yaml)
 ```
 deploy:
   route:
