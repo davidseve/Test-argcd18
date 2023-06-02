@@ -1,0 +1,7 @@
+build:
+  enabled: true
+
+deploy:
+  route:
+    tls:
+      enabled: false
