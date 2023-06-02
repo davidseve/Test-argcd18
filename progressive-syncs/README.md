@@ -124,3 +124,11 @@ There is also an order in the application creations:
 If there is an error in one environment the next environments are not synchronized.
 
 To simulate a new release the `targetRevision` can be changed to `0.0.3`. The new release will be deployed progressively.
+```
+oc apply -f argo-cd/progressive-syncs-applications.yaml
+```
+
+## Delete:
+```
+oc delete -f argo-cd/progressive-syncs-applications.yaml
+```
