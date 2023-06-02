@@ -1,5 +1,5 @@
 configmapReload:
   prometheus:
     image:
-      repository: test
-      # repository: quay.io/prometheus-operator/prometheus-config-reloader
+      #repository: test
+      repository: quay.io/prometheus-operator/prometheus-config-reloader
