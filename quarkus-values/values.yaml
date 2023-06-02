@@ -6,6 +6,5 @@ deploy:
     tls:
       enabled: false
 
-
-        # - name: image.name
-        #   value: quay.io/redhatworkshops/gitops-helm-quarkus
+image:
+  name: quay.io/redhatworkshops/gitops-helm-quarkus

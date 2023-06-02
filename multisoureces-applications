@@ -12,10 +12,13 @@ spec:
     - chart: quarkus
       repoURL: https://redhat-developer.github.io/redhat-helm-charts
       targetRevision: 0.0.3
-    - path: quarkus-values
+      helm:
+        valueFiles:
+        - $values/quarkus-values/values.yaml
+    - ref: values
       repoURL: 'https://github.com/davidseve/Test-argcd18.git'
       targetRevision: HEAD
-      syncPolicy:
-        automated:
-          prune: false
-          selfHeal: true
+  syncPolicy:
+    automated:
+      prune: false
+      selfHeal: true
