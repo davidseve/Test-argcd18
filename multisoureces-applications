@@ -1,0 +1,25 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: test2
+  namespace: openshift-gitops
+spec:
+  destination:
+    namespace: openshift-gitops
+    server: 'https://kubernetes.default.svc'
+  project: default
+  sources:
+    - helm:
+        parameters:
+        - name: build.enabled
+          value: "false"
+        - name: deploy.route.tls.enabled
+          value: "true"
+        - name: image.name
+          value: quay.io/redhatworkshops/gitops-helm-quarkus
+      chart: quarkus
+      repoURL: https://redhat-developer.github.io/redhat-helm-charts
+      targetRevision: 0.0.3
+    - path: quarkus-values
+      repoURL: 'https://github.com/davidseve/Test-argcd18.git'
+      targetRevision: HEAD
