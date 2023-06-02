@@ -1,1 +1,2 @@
-global.nameOverride: test1
+global:
+  nameOverride: test1
