@@ -14,7 +14,7 @@ spec:
       targetRevision: 0.0.3
       helm:
         valueFiles:
-        - $values/multiplesources/chart/values.yaml
+        - $values/multiplesources/chart-values/values.yaml
     - ref: values
       repoURL: 'https://github.com/davidseve/Test-argcd18.git'
       targetRevision: HEAD

@@ -1,0 +1,56 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: progressive-syncs
+  namespace: openshift-gitops
+spec:
+  generators:
+  - list:
+      elements:
+      - env: dev
+        chartversion: 0.0.3
+      - env: qa
+        chartversion: 0.0.3
+      - env: prod
+        chartversion: 0.0.3
+  strategy:
+    type: RollingSync
+    rollingSync:
+      steps:
+        - matchExpressions:
+            - key: envLabel
+              operator: In
+              values:
+                - dev
+        - matchExpressions:
+            - key: envLabel
+              operator: In
+              values:
+                - qa
+        - matchExpressions:
+            - key: envLabel
+              operator: In
+              values:
+                - prod
+  goTemplate: true
+  template:
+    metadata:
+      name: '{{.env}}-progressive-syncs'
+      labels:
+        envLabel: '{{.env}}'
+    spec:
+      destination:
+        namespace: openshift-gitops
+        server: 'https://kubernetes.default.svc'
+      project: default
+      sources:
+        - chart: quarkus
+          repoURL: https://redhat-developer.github.io/redhat-helm-charts
+          targetRevision: '{{.chartversion}}'
+          helm:
+            valueFiles:
+            - $values/progressive-syncs/chart-values/{{.env}}/values.yaml
+            - $values/progressive-syncs/chart-values/values.yaml
+        - ref: values
+          repoURL: 'https://github.com/davidseve/Test-argcd18.git'
+          targetRevision: HEAD
