@@ -51,7 +51,7 @@ spec:
         valueFiles:
         - $values/multiplesources/chart-values/values.yaml
     - ref: values
-      repoURL: 'https://g thub.com/davidseve/Test-argcd18.git'
+      repoURL: 'https://github.com/davidseve/Test-argcd18.git'
       targetRevision: HEAD
   syncPolicy:
     automated:
@@ -65,3 +65,8 @@ oc apply -f argo-cd/multisoureces-applications.yaml
 ```
 
 You can see that the application that is created is using our values.yaml
+
+## Delete:
+```
+oc delete -f argo-cd/multisoureces-applications.yaml
+```
